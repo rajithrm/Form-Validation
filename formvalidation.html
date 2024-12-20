@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <p id="count"></p>
+            <h2>Sign Up</h2>  
+            <br>
+            <div class="input-area">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your Name" id="contact-name" onkeyup="validateName()" >
+                <span id="name-error"></span>
+            </div>
+            <div class="input-area">
+                <label>Date of Birth</label>
+                <input type="date"   id="contact-date" onchange="validateDate()">
+                <span id="dob-error"></span>
+            </div>
+            <div class="input-area">
+                <label>Email id</label>
+                <input type="text" placeholder="Enter your email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+        
+            <div class="input-area"> 
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter your number" id="contact-phone" onkeyup="validatePhone()" >
+                <span id="phone-error"></span>
+            </div>
+            <div class="input-area">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" id="contact-pass" onkeyup="validatePass()">
+                <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fa-solid fa-eye" id="eye"></i></span>
+            </div>
+            <span id="pass-error"></span>
+
+            <div class="input-area">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm your password" id="contact-cpass" onkeyup="validateCpass()">
+
+                <span class="password-toggle1" onclick="togglePasswordVisibility1()"><i class="fa-solid fa-eye" id="eye1"></i></span>
+            </div>
+            <span id="cpass-error"></span>
+            
+            <div class="submit">
+                <button id="sub" onkeyup="validateForm()" value="Submit">Submit</button>
+                
+
+
+            <span id="submit-error"></span>
+            </div>
+        </form>
+    </div>
+
+<script src="./form.js"> </script>
+</body>
+
+</html>
